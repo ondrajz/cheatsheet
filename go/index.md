@@ -26,7 +26,8 @@
   ```sh
   ➤ export GO111MODULE=on
   ➤ go get -u -d github.com/golang/gddo@latest
-  ➤ go run $(go list -m -f '{{.Dir}}' github.com/golang/gddo@latest)/gosrc/print.go github.com/ofabry/go-callvis
+  ➤ cd $(go list -m -f '{{.Dir}}' github.com/golang/gddo@latest)
+  ➤ go run ./gosrc/print.go github.com/ofabry/go-callvis
   ImportPath     github.com/ofabry/go-callvis
   ResovledPath   github.com/ofabry/go-callvis
   ProjectRoot    github.com/ofabry/go-callvis
